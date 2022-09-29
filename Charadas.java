@@ -7,6 +7,12 @@
  *
  * @author denis.lsilva9
  */
+import java.util.Scanner;
 public class Charadas {
-    
+    public static void main(String[] args) {
 }
+    Scanner input = new Scanner (System.in);
+    
+    int opcao;
+    
+    System.out.println(");
