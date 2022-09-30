@@ -29,7 +29,8 @@ public class Main {
         System.out.println("4 - Sair");
         Scanner input = new Scanner(System.in);
         int option = input.nextInt();
-        
+        int i = 0;
+        while (i != 10){
         switch(option){
             
             case 2:
@@ -53,8 +54,13 @@ public class Main {
                 System.out.println("Simone Colaco");
                 System.out.println("-----------------");
                 menu();
+                
+            case 4:
+                System.out.println("Fim do programa!");
+                i = 10;
         }
         
         }
+     }
 }
 
