@@ -20,61 +20,83 @@ public class fase_charada {
 	private static final String String = null;
 
 	public static void main(String[] args) {
-     funcao1_charada();
-     funcao2_charada();
-     funcao3_charada();
- 
+		funcao1_charada();
+		funcao2_charada();
+		funcao3_charada();
+
 	} 
-		public static void funcao1_charada() {
-			Scanner input = new Scanner (System.in);
+	public static void funcao1_charada() {
+		Scanner input = new Scanner (System.in);
 
-			String charada = null;
-			int i = 0;
+		String charada = null;
+		int i = 0;
 
-			do {
-				System.out.println("O que é, o que é?\nÉ feito de água, mas se for colocado dentro da água morrerá.");
-				System.out.println("Responda:\n");
-				charada = input.next();
-				charada = charada.toLowerCase();
+		do {
+			System.out.println("CHARADA\nO que é, o que é?\nÉ feito de água, mas se for colocado dentro da água morrerá.");
+			System.out.println("Responda:\n");
+			charada = input.next();
+			charada = charada.toLowerCase();
 
-				if(charada.equals("gelo") == true){
-					System.out.println("Passou para a próxima fase!");
-					i = 4;}
-				else{
-					i++;
-					System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
-					if (i == 3) {
-						System.out.println("Você perdeu!");
-					}
-				} 
-			} while (i < 3);
-			System.out.println("______________________________________________________________________________");
-		}
-public static void funcao2_charada() {
-	Scanner input = new Scanner (System.in);
+			if(charada.equals("gelo") == true){
+				System.out.println("Será que existe água por aqui? Enfim...\nParabéns! Você passou para a próxima fase!");
+				i = 4;}
+			else{
+				i++;
+				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
+				if (i == 3) {
+					System.out.println("Você perdeu!");
+				}
+			} 
+		} while (i < 3);
+		System.out.println("______________________________________________________________________________");
+	}
+	public static void funcao2_charada() {
+		Scanner input = new Scanner (System.in);
 
-	int charada;
-	int i = 0;
+		int charada;
+		int i = 0;
 
-	do {
-		System.out.println("O que o astronauta disse quando o chamaram?\nEscolha uma resposta:");
-		System.out.println("\n\nResposta 1: Desculpe, estava no shopping! \nResposta 2: Desculpe, estava no mundo da Lua! \nResposta 3: Me deixa em paz!");  
-		charada = input.nextInt();
-		
-		if(charada == 2) {
-			System.out.println("Passou para a próxima fase!");
-			i=4;}
+		do {
+			System.out.println("CHARADA\nO que o astronauta disse quando o chamaram?");
+			System.out.println("\n\n1: Desculpe, estava no shopping! \n2: Desculpe, estava no mundo da Lua! \n3: Me deixa em paz!");  
+			charada = input.nextInt();
+
+			if(charada == 2) {
+				System.out.println("Você sabia? A Lua é um satélite natural da Terra.\nAh é, e você também passou para a próxima fase!");
+				i = 4;}
 			else {
 				i++;
 				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
-			if (i == 3) {
-				System.out.println("Você perdeu!");
-			}
+				if (i == 3) {
+					System.out.println("Você perdeu!");
+				}
 			}
 
 		}  while (i < 3);
 		System.out.println("______________________________________________________________________________");
-} public static void funcao3_charada() {
-	
+	} 
+	public static void funcao3_charada() {
+
+		Scanner input = new Scanner (System.in);
+		String charada = null;
+		int i = 0;
+
+		do {
+			System.out.println("CHARADA\nPertence a você, mas outras pessoas usam mais.");
+			charada = input.next();
+
+			if (charada.equals("nome") == true || charada.equals("meu nome") == true) {
+				System.out.println("Gosto do seu nome, e gosto de pessoas espertas.\nÉ isso mesmo: você passou para a próxima fase!");
+				i= 4;} 
+			else {
+				i++;
+				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
+				if (i == 3) {
+					System.out.println("Você perdeu!");
+				}
+			}
+		} while ( i < 3);
+	}
 }
-}
+
+
