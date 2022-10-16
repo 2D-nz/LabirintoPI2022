@@ -23,6 +23,7 @@ public class fase_charada {
 		funcao1_charada();
 		funcao2_charada();
 		funcao3_charada();
+		funcao4_charada();
 
 	} 
 	public static void funcao1_charada() {
@@ -32,7 +33,7 @@ public class fase_charada {
 		int i = 0;
 
 		do {
-			System.out.println("CHARADA\nO que é, o que é?\nÉ feito de água, mas se for colocado dentro da água morrerá.");
+			System.out.println("CHARADA\n\nO que é, o que é?\nÉ feito de água, mas se for colocado dentro da água morrerá.");
 			System.out.println("Responda:\n");
 			charada = input.next();
 			charada = charada.toLowerCase();
@@ -53,12 +54,12 @@ public class fase_charada {
 	public static void funcao2_charada() {
 		Scanner input = new Scanner (System.in);
 
-		int charada;
-		int i = 0;
+		int charada, i = 0;
 
 		do {
-			System.out.println("CHARADA\nO que o astronauta disse quando o chamaram?");
-			System.out.println("\n\n1: Desculpe, estava no shopping! \n2: Desculpe, estava no mundo da Lua! \n3: Me deixa em paz!");  
+			System.out.println("CHARADA\n\nO que o astronauta disse quando o chamaram?");
+			System.out.println("\n1: Desculpe, estava no shopping!\n2: Desculpe, estava no mundo da Lua!\n3: Me deixa em paz!");  
+			System.out.println("Alternativa:\n");
 			charada = input.nextInt();
 
 			if(charada == 2) {
@@ -82,12 +83,13 @@ public class fase_charada {
 		int i = 0;
 
 		do {
-			System.out.println("CHARADA\nPertence a você, mas outras pessoas usam mais.");
+			System.out.println("CHARADA\n\nPertence a você, mas outras pessoas usam mais.");
+			System.out.println("Responda:\n");
 			charada = input.next();
 
 			if (charada.equals("nome") == true || charada.equals("meu nome") == true) {
 				System.out.println("Gosto do seu nome, e gosto de pessoas espertas.\nÉ isso mesmo: você passou para a próxima fase!");
-				i= 4;} 
+				i = 4;} 
 			else {
 				i++;
 				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
@@ -95,8 +97,32 @@ public class fase_charada {
 					System.out.println("Você perdeu!");
 				}
 			}
-		} while ( i < 3);
+		} while (i < 3);
+		System.out.println("______________________________________________________________________________");
+		
+	} public static void funcao4_charada() {
+
+		Scanner input = new Scanner (System.in);
+
+		int charada, i = 0;
+
+		System.out.println("CHARADA\n\nO que é, o que é?\nOcorre uma vez a cada minuto, duas vezes a cada momento, mas jamais a cada quinhentos anos.");
+		System.out.println("\n1. Letra M\n2. A vida\n3.Estrela cadente");
+		System.out.println("Alternativa:\n");
+		charada = input.nextInt();
+
+		do {
+			if(charada == 1) {
+				System.out.println("Estudos comprovam: o tempo realmente passa mais devagar fora da Terra.\nParabéns! Passou para a próxima fase.");
+				i = 4;}
+			else {
+				i++;
+				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
+				if (i == 3) {
+					System.out.println("Você perdeu!");
+				}
+			}
+		} while(i < 3);
 	}
 }
-
 
