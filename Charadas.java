@@ -24,6 +24,7 @@ public class fase_charada {
 		funcao2_charada();
 		funcao3_charada();
 		funcao4_charada();
+		funcao5_charada();
 
 	} 
 	public static void funcao1_charada() {
@@ -83,9 +84,10 @@ public class fase_charada {
 		int i = 0;
 
 		do {
-			System.out.println("CHARADA\n\nPertence a você, mas outras pessoas usam mais.");
+			System.out.println("CHARADA\n\nTe pertence, mas outras pessoas usam mais que você.");
 			System.out.println("Responda:\n");
 			charada = input.next();
+			charada = charada.toLowerCase();
 
 			if (charada.equals("nome") == true || charada.equals("meu nome") == true) {
 				System.out.println("Gosto do seu nome, e gosto de pessoas espertas.\nÉ isso mesmo: você passou para a próxima fase!");
@@ -99,7 +101,7 @@ public class fase_charada {
 			}
 		} while (i < 3);
 		System.out.println("______________________________________________________________________________");
-		
+
 	} public static void funcao4_charada() {
 
 		Scanner input = new Scanner (System.in);
@@ -107,7 +109,7 @@ public class fase_charada {
 		int charada, i = 0;
 
 		System.out.println("CHARADA\n\nO que é, o que é?\nOcorre uma vez a cada minuto, duas vezes a cada momento, mas jamais a cada quinhentos anos.");
-		System.out.println("\n1. Letra M\n2. A vida\n3.Estrela cadente");
+		System.out.println("\n1. Letra M\n2. A vida\n3. Estrela cadente");
 		System.out.println("Alternativa:\n");
 		charada = input.nextInt();
 
@@ -123,6 +125,32 @@ public class fase_charada {
 				}
 			}
 		} while(i < 3);
+	} public static void funcao5_charada() {
+
+		Scanner input = new Scanner (System.in);
+
+		String charada = null;
+		int i = 0;
+
+		System.out.println("CHARADA\n\nO que é, o que é?\nEstá sempre na sua frente, mas não pode ser visto?");
+		System.out.println("Responda:\n");
+		charada = input.next();
+		charada = charada.toLowerCase();
+
+		do {
+			if(charada.equals("futuro") == true || charada.equals("o futuro") == true){
+				System.out.println("Seu futuro será brilhante!\nAh, e você também concluiu todas as charadas!");
+				i = 4;}
+			else {
+				i++;
+				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
+				if (i ==3) {
+					System.out.println("Você perdeu!");
+				}
+			}
+
+		}while(i < 3);
+
 	}
 }
 
