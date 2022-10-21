@@ -1,23 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author denis.lsilva9
- */
-
-import java.io.*;
-import java.lang.Thread;
+package com.mycompany.mavenproject1;
 import java.util.Scanner;
-   
 public class Main {
     
+    public static void jogo(){
+        int retornoFase = 0;
+       Fase1 fase1 = new Fase1();
+       retornoFase = fase1.execFase1();
+       if(retornoFase==2){
+           Fase2 fase2 = new Fase2();
+           
+       }
+       int contFase = 1;
+    }
+    
     public static void main(String[] args) {
-        
         menu();
-       
+        jogo();
+        
+        
         
     }
      public static void menu(){
@@ -33,13 +33,17 @@ public class Main {
         while (i != 10){
         switch(option){
             
+            case 1:
+                jogo();
+                i = 10;
+                break;
+            
             case 2:
                 System.out.println("-----------------");
                 System.out.println("Como jogar:");
                 System.out.println("Serão sempre lhe dadas opções de para onde andar");
                 System.out.println("Dependendo de sorte, você pode ter uma armadilha, ou charada");
                 System.out.println("Charadas podem te dar dicas");
-                System.out.println("Armadilhas podem te ajudar ou atrapalhar");
                 System.out.println("Passa-se de fase, descobrindo o caminho até o final");
                 System.out.println("Ganha-se o jogo, ao passar da última fase");
                 System.out.println("-----------------");
@@ -50,7 +54,6 @@ public class Main {
                 System.out.println("Feito por:");
                 System.out.println("Lorena Mafra");
                 System.out.println("Denis Silva");
-                System.out.println("Robson Figueiredo");
                 System.out.println("Simone Colaco");
                 System.out.println("-----------------");
                 menu();
@@ -63,4 +66,3 @@ public class Main {
         }
      }
 }
-
