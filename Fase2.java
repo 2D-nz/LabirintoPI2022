@@ -19,7 +19,7 @@ public class Fase2 {
         fase.add(11);
         int contParede = 0;
         Scanner input = new Scanner(System.in);
-        int pos = 31;
+        int pos = 51;
         int nextPos = 1;
         while (pos != fase.get((fase.size() - 1))) {
             System.out.println("Para onde ir agora?");
@@ -51,7 +51,17 @@ public class Fase2 {
                     i = 50;
                     pos = nextPos;
                     if (pos == fase.get(10)){
-                        System.out.println("Aqui vai ter a charada");
+                        // Aqui vai ter a charada"
+                        //A pisata pode ser qualquer indicativo para o caminho
+                        // Uma dica possível é dizer que no lado esquerdo há uma chaminé
+                    }
+                    if(pos==fase.get(4)){
+                        System.out.println("|   | X | X | X | X |");
+                        System.out.println("|   |   |   |   |   |");
+                        System.out.println("| X | X |   | X | X |");
+                        System.out.println("| X | X |   | X | X |");
+                        System.out.println("|   |   |   |   | @ |");
+
                     }
 
                 } else if (i == (fase.size() - 1)) {
@@ -64,7 +74,8 @@ public class Fase2 {
             }
         }
         System.out.println("Parabéns, você passou de fase");
-        return 1;
+        System.out.println("------------------------------");
+        return 3;
 
     }
 }
