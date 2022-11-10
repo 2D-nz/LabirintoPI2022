@@ -5,14 +5,16 @@ public class Main {
         Tutorial.main();
         System.out.println("Este foi o fim do tutorial! Boa sorte");
         System.out.println("--------------------------------------");
-        //int faseIndex = Fase1.main();
-        //execFase(faseIndex);
-        int faseIndex = Fase2.main();
+        int faseIndex = Fase1.main();
         execFase(faseIndex);
-        //faseIndex = Fase3.main();
-        //exeFase(faseIndex);
-
-
+        faseIndex = Fase2.main();
+        execFase(faseIndex);
+        faseIndex = Fase3.main();
+        execFase(faseIndex);
+        faseIndex = Fase4.main();
+        execFase(faseIndex);
+        faseIndex = Fase5.main();
+        execFase(faseIndex);
 
     }
 
@@ -21,6 +23,12 @@ public class Main {
             System.out.println("Game Over");
             System.exit(0);
         }
+
+    public static void finalJogo(){
+        System.out.println("Parabéns");
+        System.out.println("A jornada foi árdua, porém você conseguiu!");
+        System.out.println("Você está voltando para o planeta Terra, e está tudo seguro... por enquanto");
+    }
 
 
     public static void main(String[] args) {
@@ -37,14 +45,17 @@ public class Main {
                 Fase2.main();
                 break;
             case 3:
-                //Fase3.main();
+                Fase3.main();
                 break;
             case 4:
-                //Fase4.main;
+                Fase4.main();
                 break;
             case 5:
-                //Fase5.main();
+                Fase5.main();
                 break;
+
+            case 6:
+                finalJogo();
             default:
                 gameOver();
         }
