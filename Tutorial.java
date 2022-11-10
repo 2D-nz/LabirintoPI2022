@@ -4,9 +4,9 @@ public class Tutorial {
         System.out.println("Bem vindo(a/e) ao tutorial!");
         System.out.println("Neste jogo você está preso em um labirinto!");
         System.out.println("Pense nisso como um jogo da velha:");
-        System.out.println(" * |   |  ");
-        System.out.println(" * |   | * ");
-        System.out.println(" x |   | * ");
+        System.out.println(" X |   |  ");
+        System.out.println(" X |   | X ");
+        System.out.println(" @ |   | X ");
 
 
         System.out.println("O pequeno x é você");
@@ -18,6 +18,9 @@ public class Tutorial {
         System.out.println("Durante as fases você será surpreendido por charadas");
         System.out.println("Se acertar, você conseguirá dicas de como avançar!");
         System.out.println("Se conseguir achar o mapa da fase, ficará mais fácil de você achar o caminho");
+        System.out.println("Todas as fases seguem padrões, se sua intuição for boa, não precisará aprender");
+        System.out.println("Mas se for bom aprendendo, não precisará de intuição");
+        System.out.println("Divirta-se");
         System.out.println("Boa sorte! :)");
     }
 }
