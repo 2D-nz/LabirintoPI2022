@@ -1,7 +1,34 @@
+package charadas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Fase2 {
+	public static String funcao1_charada() {
+		Scanner input = new Scanner (System.in);
+
+		String charada = null;
+		int i = 0;
+		String retorno = null;
+
+		do {
+			System.out.println("CHARADA\n\nO que é, o que é?\nÉ feito de água, mas se for colocado dentro da água morrerá.");
+			System.out.println("Responda:\n");
+			charada = input.next();
+			charada = charada.toLowerCase();
+
+			if(charada.equals("gelo") == true){
+				retorno = "Será que existe água por aqui? Enfim...\nSó sei que à esquerda tem uma chaminé!";
+				i = 4;}
+			else{
+				i++;
+				retorno = "Resposta errada. Você ainda tem " + (3-i) + " tentativas.";
+				if (i == 3) {
+					retorno = "Você perdeu!";
+				}
+			} 
+		} while (i < 3);
+		return retorno;
+	}
     public static int main() {
         ArrayList<Integer> fase = new ArrayList<Integer>();
         fase.add(51);
@@ -51,29 +78,9 @@ public class Fase2 {
                     i = 50;
                     pos = nextPos;
                     if (pos == fase.get(10)){
-                        public static void funcao1_charada() {
-		Scanner input = new Scanner (System.in);
-
-		String charada = null;
-		int i = 0;
-
-		do {
-			System.out.println("CHARADA\n\nO que é, o que é?\nÉ feito de água, mas se for colocado dentro da água morrerá.");
-			System.out.println("Responda:\n");
-			charada = input.next();
-			charada = charada.toLowerCase();
-
-			if(charada.equals("gelo") == true){
-				System.out.println("Será que existe água por aqui? Enfim...\nSó sei que do lad esquerdo tem uma chaminé!");
-				i = 4;}
-			else{
-				i++;
-				System.out.println("Resposta errada. Você ainda tem " + (3-i) + " tentativas.");
-				if (i == 3) {
-					System.out.println("Você perdeu!");
-				}
-			} 
-		} while (i < 3);
+                        
+                    funcao1_charada();	
+                    	
                     }
                     if(pos==fase.get(4)){
                         System.out.println("|   | X | X | X | X |");
