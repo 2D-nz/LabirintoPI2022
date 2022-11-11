@@ -1,7 +1,36 @@
+package charadas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Fase3 {
+	public static String funcao2_charada() {
+		Scanner input = new Scanner (System.in);
+
+		int charada, i = 0;
+		String retorno = null;
+
+		do {
+			System.out.println("CHARADA\n\nO que o astronauta disse quando o chamaram?");
+			System.out.println("\n1: Desculpe, estava no shopping!\n2: Desculpe, estava no mundo da Lua!\n3: Me deixa em paz!");  
+			System.out.println("Alternativa:\n");
+			charada = input.nextInt();
+
+			if(charada == 2) {
+				retorno = "Você sabia? A Lua é um satélite natural da Terra.\nAh, e se quiser avançar mais saiba que é melhor subir 2x\nSó não lembro se é pela esquerda ou direita...";
+				i = 4;}
+			else {
+				i++;
+				retorno = "Resposta errada. Você ainda tem " + (3-i) + " tentativas.";
+				if (i == 3) {
+					retorno = "Você perdeu!";
+				}
+			}
+
+		}  while (i < 3);
+		return retorno;
+		
+	}
+	
     public static int main() {
         ArrayList<Integer> fase = new ArrayList<Integer>();
         fase.add(61);
@@ -54,8 +83,8 @@ public class Fase3 {
                     i = 50;
                     pos = nextPos;
                     if (pos == fase.get(9)){
-                        // Aqui vai ter a charada"
-                        // Como a fase segue um padrão vc pode fazer alguma analogia ao mapa
+                        
+                    	funcao2_charada();
                     }
                     if (pos == fase.get(7)){
                         System.out.println("Você encontrou um espelho na parede...");
