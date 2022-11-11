@@ -1,7 +1,35 @@
+package charadas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Fase5 {
+	public static String funcao4_charada() {
+
+		Scanner input = new Scanner (System.in);
+
+		int charada, i = 0;
+		String retorno = null;
+
+		System.out.println("CHARADA\n\nO que é, o que é?\nOcorre uma vez a cada minuto, duas vezes a cada momento, mas jamais a cada quinhentos anos.");
+		System.out.println("\n1. Letra M\n2. A vida\n3. Estrela cadente");
+		System.out.println("Alternativa:\n");
+		charada = input.nextInt();
+
+		do {
+			if(charada == 1) {
+				retorno = "Estudos comprovam: o tempo realmente passa mais devagar fora da Terra.\nSe aceitar um conselho: vai reto, mas saiba que é melhor virar à direita.";
+				i = 4;}
+			else {
+				i++;
+				retorno = "Resposta errada. Você ainda tem " + (3-i) + " tentativas.";
+				if (i == 3) {
+					retorno = "Você perdeu!";
+				}
+			}
+		} while(i < 3);
+		return retorno;
+	}
+	
     public static int main() {
         ArrayList<Integer> fase = new ArrayList<Integer>();
         fase.add(23);
@@ -58,8 +86,9 @@ public class Fase5 {
                     pos = nextPos;
                     if (pos == fase.get(17)) {
                         ;
-                        // Aqui vai ter a charada"
-                        //also não sei dica, desculpa :(
+                        
+                        funcao4_charada();
+                        
                     }
 
                     if (pos == fase.get(1)) {
