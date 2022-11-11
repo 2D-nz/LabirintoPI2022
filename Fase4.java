@@ -1,7 +1,34 @@
+package charadas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Fase4 {
+	public static String funcao3_charada() {
+
+		Scanner input = new Scanner (System.in);
+		String charada = null;
+		int i = 0;
+		String retorno = null;
+
+		do {
+			System.out.println("CHARADA\n\nTe pertence, mas outras pessoas usam mais que você.");
+			System.out.println("Responda:\n");
+			charada = input.next();
+			charada = charada.toLowerCase();
+
+			if (charada.equals("nome") == true || charada.equals("meu nome") == true) {
+				retorno = "Gosto do seu nome, e só por isso vou te ajudar: reto toda a vida!";
+				i = 4;} 
+			else {
+				i++;
+				retorno = "Resposta errada. Você ainda tem " + (3-i) + " tentativas.";
+				if (i == 3) {
+					retorno = "Você perdeu!";
+				}
+			}
+		} while (i < 3);
+		return retorno;}
+	
     public static int main() {
         ArrayList<Integer> fase = new ArrayList<Integer>();
         fase.add(11);
@@ -54,8 +81,8 @@ public class Fase4 {
                     i = 50;
                     pos = nextPos;
                     if (pos == fase.get(8)){
-                        // Aqui vai ter a charada"
-                        //não sei dicas pra charada desculpa a :(
+                        
+                    	funcao3_charada();
                     }
 
                     if (pos == fase.get(9)){
