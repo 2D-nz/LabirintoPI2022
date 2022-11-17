@@ -1,10 +1,13 @@
+- Os arquivos Java estavam com problemas ao importar um ao outro, na IDE InteliJ ocorreu sem problemas, porém ao ser importado para a IDE Eclipse, houveram problemas
+Por via das dúvidas, adicionamos o arquivo .rar com todos os arquivos disponibilizados pela IDE InteliJ
+
 IDEIAS PRINCIPAIS
 
 Atribuições
 Arquivos:
   Charada -> Nena;
   História -> Si;
-  Armadilhas -> Rob;
+  
   Fases - Comuna;
   
   
@@ -27,23 +30,4 @@ Arquivos:
     Se errar a resposta o jogador terá sua VIDA diminuída
     
   
-  ARMADILHAS
-    Armadilhas serão posicionadas nas fases
-    Ao pisar em uma armadilha, o jogador pode receber um bônus ou ônus
-      Exemplos: 
-      - Você voltou para o começo do labrinto;
-      - Você achou uma comida alielígena e recuperou sua vida;
-  
-  GPS 
-   - O GPS do personagem tem apenas 3 cargas
-   - Durante as fases, ele pode acionar o GPS para achar um caminho
-  
-  
-  FASE SECRETA
-  - No final da fase 4, há um caminho alternativo que pode ser encontrado
-  - Ao passar da fase secreta, o personagem se encontra com uma mecânica que o ajuda a remontar seu foguete
-
-
-  Final
-  - Ao encontrar todas as peças, o personagem tenta montar seu foguete porém o foguete explode
-  - Se passar pela fase secreta, a mecânica o ajuda a montar o foguete e ele volta para a terra;
+  Ao finalizar o jogo, seu personagem consegue retornar para o planeta Terra em segurança
